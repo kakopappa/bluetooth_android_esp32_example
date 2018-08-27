@@ -1,4 +1,4 @@
-# How to send data (String) from Android to ESP32 via Bluetooth 
+# esp32 arduino android ble example
 
 There are so many examples for ESP32 bluetooth servers but I could not find an example code to send data from Android app to ESP32 Bluetooth server so I made one.
 
