@@ -239,10 +239,11 @@ public class MainActivity extends AppCompatActivity implements  OnBluetoothDevic
             if (data != null && data.length > 0) {
                 final StringBuilder stringBuilder = new StringBuilder(data.length);
                 for (byte byteChar : data) {
-                    stringBuilder.append(String.format("%02X ", byteChar));
+                    char b = (char) byteChar;
+                    stringBuilder.append(b);
                 }
 
-                Log.i("MainActivity","Get string(ASCII) : " + stringBuilder.toString());
+                Log.i("MainActivity","Get string : " + stringBuilder.toString());
             }
         }
         }
