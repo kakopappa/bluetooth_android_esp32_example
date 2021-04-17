@@ -82,11 +82,13 @@ void setup() {
 
 void loop() {
     // notify changed value
-    if (deviceConnected) {
-        //pCharacteristic->setValue(&value, 1);
-        //pCharacteristic->notify();
-       // value++;
-       // delay(10); // bluetooth stack will go into congestion, if too many packets are sent
+	if (deviceConnected) {
+        Serial.println("send bluetooth..");
+        String s = "notification string";
+        pCharacteristic->setValue(s.c_str());
+        pCharacteristic->notify();
+        value++;
+        delay(2000); // bluetooth stack will go into congestion, if too many packets are sent
     }
     // disconnecting
     if (!deviceConnected && oldDeviceConnected) {
